@@ -96,7 +96,7 @@
         window.location.href = "pantallabusqueda.html";
       }
 
-      }); */
+      }); */  
 
       console.log(fbinfo);
     });
