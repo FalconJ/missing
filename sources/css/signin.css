@@ -100,7 +100,7 @@ a:hover {
 }
 
 .icon-bar {
-	background-color:#fff;
+	background-color:#646566;
 }
 
 .navbar-trans {
@@ -112,6 +112,7 @@ a:hover {
 .navbar-trans .navbar-brand, .navbar-trans >.container-fluid .navbar-brand {
     padding: 14px;
     color:#f44d3c;
+    
 }
 
 .navbar-trans li>a:focus,.navbar-trans li.active {
