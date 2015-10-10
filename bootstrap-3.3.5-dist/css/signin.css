@@ -4,6 +4,13 @@ body {
   background-color: #eee;
 }
 
+
+.titulo{
+    align-content: center;
+    padding-right: 50px;
+    padding-left: 15px;
+}
+
 .form-signin {
   max-width: 330px;
   padding: 15px;
