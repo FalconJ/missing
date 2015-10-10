@@ -81,8 +81,10 @@
           fbinfo.push(response[property]);
         }
       }
+
       fbinfo.push('https://graph.facebook.com/' + response.id + '/picture?type=large');
-      var user = getUser(response.email, function(user) {
+      
+     /* var user = getUser(response.email, function(user) {
 
           if(user.results[0] == null) {
 
@@ -94,7 +96,7 @@
         window.location.href = "pantallabusqueda.html";
       }
 
-      });
+      }); */
 
       console.log(fbinfo);
     });
