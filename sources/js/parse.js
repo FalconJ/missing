@@ -20,11 +20,3 @@ function registerUser(fbinfo){
 	});
 
 }
-
-
-0: "1017841588246848"
-1: "Jorge Falcón"
-2: "Jorge"
-3: "Falcón"
-4: "male"
-5: "https://graph.facebook.com/1017841588246848/picture?type=large"
