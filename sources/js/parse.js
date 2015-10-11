@@ -1,4 +1,4 @@
-Parse.initialize("R6bSzRV4B4p0PPOonPBfJMYOmVzc30ekeJhyQUEv", "amWdFqFhwmP7jLGPh0zCI2ozm5pjVdoqz9wiTGeL");
+Parse.initialize("HNtPCmySZi4pjv9wn9k4B406hmWDHsxUSSoQDa1b", "ssQ2yXNF7fWN4aPX9XS2w2BkT5bNW7QHPt1vDCBU");
 
 function registerUser(fbinfo){
 
