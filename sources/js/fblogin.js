@@ -86,10 +86,10 @@
       
       console.log(fbinfo);
 
-      var loggedIn = logUser(fbinfo);
+      var registered = registerUser(fbinfo);
 
-      if(loggedIn){
-        registerUser(fbinfo)
+      if(!registered){
+        logUser(fbinfo)
       }
 
     });

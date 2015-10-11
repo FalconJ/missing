@@ -21,9 +21,10 @@ function registerUser(fbinfo){
 		success: function(user){
 			console.log("Welcome buddy! :3");
 			window.location = "login.html";
+			return true;
 		},
 		error: function(user, error){
-			alert("Error: " + error.code + " " + error.message);
+			return false;			
 		}
 	});
 
@@ -41,10 +42,9 @@ function logUser(fbinfo){
 		success: function(){
 			console.log("Welcome back bro");
 	    	window.location = "login.html";
-	    	return true;
 		},
 		error: function(user, error){
-			return false;
+			alert("Error: " + error.message);
 		}
 	});
 }
