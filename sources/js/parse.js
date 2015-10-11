@@ -24,7 +24,6 @@ function registerUser(fbinfo){
 			return true;
 		},
 		error: function(user, error){
-			console.log("user already exists");
 			return false;			
 		}
 	});
