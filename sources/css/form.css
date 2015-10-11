@@ -3,17 +3,17 @@
 }
 
 #map{
-	margin: 400px;
+    width: 540x; 
+    height: 540px;
     position:absolute;
-    left:10px;
-    top:10px;
+    left:600px;
+    top:50px;
     right:20px; 
 }
 #right{
 	position: absolute;
-	top: 10px;
+	top: 50px;
 	left: 20px;
-	z-index: 99;
 }
 
 .border{
