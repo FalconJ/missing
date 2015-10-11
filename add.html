@@ -172,7 +172,7 @@ function initialize() {
 function addMarker(location, map) {
   // Add the marker at the clicked location, and add the next-available label
   // from the array of alphabetical characters.
-  if($("#personFirstName").val() != "" && "#personLastName").val() != "" && "#personAge").val() > 0 && "#personLastName").val() != "" && "#personLastSeen").val() != "" && "#personDescription").val() != "" && "#personIllness").val() != "")
+  if(($("#personFirstName").val() != "" && $("#personLastName").val() != "" && $("#personAge").val() > 0 && $("#personLastName").val() != "" && $("#personLastSeen").val() != "" && $("#personDescription").val() != "" && $("#personIllness").val() != "") || ($("#petName").val() != "" && $("#petAnimal").val() != "" && $("#petAge").val() > 0 && $("#petLastSeen").val() != "" && $("#petDescription").val() != "" && $("#petIllness").val() != ""))
   {
   var marker = new google.maps.Marker({
     position: location,
