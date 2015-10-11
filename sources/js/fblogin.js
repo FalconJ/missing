@@ -46,7 +46,6 @@
 
     FB.getLoginStatus(function(response){
       if(response.status === 'connected'){
-        getUserData();
       }
       else if(response.status === 'not_authorized'){
         alert("Give permission to our app.");
@@ -72,6 +71,6 @@
       if(response.authResponse){
         getUserData();
       }
-    }, {scope: 'id,name,email,first_name,last_name,gender', return_scopes: true}); 
+    }, {scope: 'id,name,email,first_name,last_name,gender'}); 
   }, false);
  
