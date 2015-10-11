@@ -27,15 +27,6 @@
     <!-- PARSE -->
     <script  src="/sources/js/parse.js"></script>
     
-    <!-- Angular -->
-    <script type="text/javascript" src ="sources/js/angular.min.js" ></script>
-      
-    <!-- Google API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXhdlWU5b5XrVEzXVF29vFJwlGQg6spWk&callback=initMap"
-        async defer></script>
-      
-    <!-- Facebook Login --> 
-    <script  src="/sources/js/fblogin.js"></script>
    
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -84,27 +75,41 @@
     </div>
  </nav>
          
-    <div id="map"></div>
-    
-    <script>
-      function initMap() {
-          var myLatLng = {lat: -25.363, lng: 131.044};
+    <h1>Messagin</h1>
 
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 4,
-            center: myLatLng
-          });
-
-          var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            title: 'Hello World!'
-          });
-
-      }
-    </script>
-
-	<h1> You've met with a terrible fate, haven't you? </h1>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <h1>Messages from the community</h1>
+            <table class="table table-bordered table-striped">
+                <caption>Messages</caption>
+                <thead>
+                    <tr>
+                        <th>
+                            Username
+                        </th>
+                        <th>
+                            Message
+                        </th>
+                        <th>
+                            
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">No messages</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row-fluid">
+            <form id="new-user">
+                <input type="text" name="username" placeholder="Username" />
+                <input type="text" name="message" placeholder="Message" />
+                <a id="send" class="btn btn-primary">SEND</a>
+            </form>     
+        </div>
+    </div>
 	
   </body>
 </html>
