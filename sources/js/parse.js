@@ -1,18 +1,15 @@
 Parse.initialize("R6bSzRV4B4p0PPOonPBfJMYOmVzc30ekeJhyQUEv", "amWdFqFhwmP7jLGPh0zCI2ozm5pjVdoqz9wiTGeL");
 
-function registerUser(fbinfo){
-
-	var user = new Parse.User();
+function registerUser(user, fbinfo){
 
 	user.set("username", fbinfo[1]);
 	user.set("password", fbinfo[0]);
 	user.set("email", "test@email.com");
-	user.set("sex", fbinfo[4]);
-	user.set("photo", fbinfo[5]);
 
 	user.signUp(null, {
 		success: function(user){
 			console.log("Welcome buddy! :3");
+			window.location = "login.html";
 		},
 		error: function(user, error){
 			alert("Error: " + error.code + " " + error.message);
@@ -22,6 +19,15 @@ function registerUser(fbinfo){
 }
 
 function logUser(fbinfo){
+
+   var currentUser = Parse.User.current();
+    
+    if (currentUser) {
+        Parse.User.logOut();
+    } 
+
+    e.preventDefault();
+
 	var user = new Parse.User();
 
 	user.set("username", fbinfo[1]);
@@ -29,10 +35,10 @@ function logUser(fbinfo){
 
 	user.logIn(null, {
 		success: function(){
-	      return true;
+	      window.location = "login.html";
 		},
 		error: function(user, error){
-			return false;
+			registerUser(user, fbinfo);
 		}
 	})
 }
