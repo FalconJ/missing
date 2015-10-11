@@ -18,9 +18,8 @@ var ParseObj = Parse.Object.extend('PersonPost');
 
 //$('form:first').submit(function(e){
   
-  function missPeople(e){
+  function missPeople(){
     console.log("hi guise");
-    e.preventDefault();
 
     var data = {
         Name        : $("#personFirstName").val() + " " + $("#personLastName").val(),
