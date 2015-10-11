@@ -14,6 +14,8 @@
 
     <!-- jQuery -->
     <script src="sources/js/jquery.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDvWUChU-0t1FAH-zklJ1Rek51iumJhPg&callback=initMap" async defer></script>
+    
 
     <!-- Bootstrap core CSS -->
     <link href="/sources/css/bootstrap.min.css" rel="stylesheet">
@@ -96,6 +98,18 @@
 
 
     </div> <!-- /container -->
+    
+    <script>
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -34.397, lng: 150.644},
+    zoom: 8
+  });
+}
+
+    </script>
 
   </body>
 </html>
