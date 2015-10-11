@@ -13,7 +13,7 @@ body{
 
 .subtitulo{font-family:helvetica;font-size:30px; color:brown;text-align: center;}
 
-.logo{padding: 0px; margin-left: -80px; margin-top: -65px;}
+.logo{padding: 0px; margin-left: 80px; }
 
 #map {
   height: 400px; width:300px;
