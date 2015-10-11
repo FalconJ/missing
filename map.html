@@ -20,7 +20,7 @@
     <!-- Bootstrap core CSS -->
     <link href="/sources/css/bootstrap.min.css" rel="stylesheet">
     <link href="/sources/css/signin.css" rel="stylesheet">
-  
+    <link rel="stylesheet" type="text/css" href="sources/css/maps.css">
     <!-- Parse SDK -->
     <script src="//www.parsecdn.com/js/parse-1.6.5.min.js"></script>
   
@@ -86,96 +86,90 @@
     </div>
  </nav>
 
-         
-        
-<div id = "locMap"></div>
-<div class="container-fluid">
-    <div class="row-fluid">
-        <h1>Map near you</h1>
-        <table class="table table-bordered table-striped">
-            <caption>People</caption>
-            <thead>
-                <tr>
-                    <th>
-                        Name
-                    </th>
-                    <th>
-                        Age
-                    </th>
-                    <th>
-                        Last Seen
-                    </th>
-
-                    <th>
-                        Description
-                    </th>
-
-                    <th>
-                        Illness
-                    </th>
-
-                    <th>
-                        Sex
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td colspan="2">No people near you</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-      
-<div class="container-fluid">
-    <div class="row-fluid">
-        <table class="table table-bordered table-striped">
-            <caption>Pet</caption>
-            <thead>
-                <tr>
-                    <th>
-                        Name
-                    </th>
-
-                    <th>
-                        Animal
-                    </th>
-                    
-                    <th>
-                        Age
-                    </th>
-
-                    <th>
-                        Last Seen
-                    </th>
-
-                    <th>
-                        Description
-                    </th>
-
-                    <th>
-                        Illness
-                    </th>
-
-                    <th>
-                        Sex
-                    </th>
-
-                    <th>
-                        Reward
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td colspan="2">No pet near you</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
     
+<div id = "locMap2"></div>
+
+<div style="background-color: lightgray;" >
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <h1>Map near you</h1>
+            <table class="table table-bordered table-striped">
+                <caption>People</caption>
+                <thead>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Age
+                        </th>
+
+                        <th>
+                            Description
+                        </th>
+
+                        <th>
+                            Illness
+                        </th>
+
+                        <th>
+                            Sex
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="personas">
+                    <tr>
+                        <td colspan="2">No people near you</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+          
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <table class="table table-bordered table-striped">
+                <caption>Pet</caption>
+                <thead>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+
+                        <th>
+                            Animal
+                        </th>
+                        
+                        <th>
+                            Age
+                        </th>
+
+                        <th>
+                            Description
+                        </th>
+
+                        <th>
+                            Illness
+                        </th>
+
+                        <th>
+                            Sex
+                        </th>
+
+                        <th>
+                            Reward
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="mascotas">
+                    <tr>
+                        <td colspan="2">No pet near you</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+ </div>   
 
 <script>
 // In the following example, markers appear when the user clicks on the map.
@@ -186,8 +180,8 @@ var labelIndex = 0;
 function initialize() { 
   var monterrey = {lat: 25.662936, lng: -100.419870};
 
-  var map = new google.maps.Map(document.getElementById('locMap'), {
-        zoom: 4,
+  var map = new google.maps.Map(document.getElementById('locMap2'), {
+        zoom: 14,
         center: monterrey
   });
 

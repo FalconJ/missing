@@ -31,6 +31,8 @@ function missPeople(){
 
     parseObj = new ParseObj();
 
+    $("#personForm")[0].reset();
+    
     parseObj.save(data, {
         success     : function(parseObj){
                         console.log(parseObj.get('Name') + " " + parseObj.get('Age'));
@@ -62,6 +64,8 @@ function missDoge(){
 
     wow = new muchDoge();
 
+    $("#petForm")[0].reset();
+    
     wow.save(data,{
         success     : function(wow){
                         console.log(wow.get('Name') + " " + wow.get('Age'));

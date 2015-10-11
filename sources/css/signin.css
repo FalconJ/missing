@@ -21,10 +21,20 @@ body{
   margin: 40px;
   padding: 50px;
       }
+<<<<<<< HEAD
     
 .send{
  margin-right: 150px;   
 }
+=======
+
+#locMap {
+  height: 400px; width:700px;
+  margin: 80px;
+  padding: 100px;
+      }
+
+>>>>>>> c8b9934fce923331c18e259752fddef8cdc18f90
 
 .title{
     align-content: center;
