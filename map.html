@@ -33,6 +33,7 @@
     <!-- Google API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXhdlWU5b5XrVEzXVF29vFJwlGQg6spWk&callback=initMap"
         async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXhdlWU5b5XrVEzXVF29vFJwlGQg6spWk&signed_in=true"></script>
       
     <!-- Facebook Login --> 
     <script  src="/sources/js/fblogin.js"></script>
@@ -90,7 +91,7 @@
 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var labelIndex = 0;
 
-function initMap() { 
+function initialize() { 
   var monterrey = {lat: 25.662936, lng: -100.419870};
 
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -120,7 +121,7 @@ function addMarker(location, map) {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
-
+</script>
 
 	<h1> You've met with a terrible fate, haven't you? </h1>
 	<button onclick="logOut();">Log Out</button>
