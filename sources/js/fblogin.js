@@ -108,9 +108,9 @@
  
       } else {
         window.location.href = "pantallabusqueda.html";
-      } */
+      } 
 
-      }); 
+      }); */
 
 
     });
