@@ -22,8 +22,6 @@ function logUser(fbinfo){
         Parse.User.logOut();
     } 
 
-    e.preventDefault();
-
 	var user = new Parse.User();
 
 	user.set("username", fbinfo[1]);
