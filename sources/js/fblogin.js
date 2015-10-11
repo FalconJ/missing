@@ -14,11 +14,7 @@
       
       console.log(fbinfo);
 
-      var registered = registerUser(fbinfo);
-
-      if(!registered){
-        logUser(fbinfo)
-      }
+      registerUser(fbinfo);
 
     });
   }

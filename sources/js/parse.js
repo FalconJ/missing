@@ -22,10 +22,9 @@ function registerUser(fbinfo){
 		success: function(user){
 			console.log("Welcome buddy! :3");
 			window.location = "login.html";
-			return true;
 		},
-		error: function(error){
-			return false;			
+		error: function(fbinfo, error){
+			logUser(fbinfo);			
 		}
 	});
 
