@@ -1,0 +1,38 @@
+#parent{
+    position:relative;
+    overflow:hidden;
+}
+
+#map{
+	margin: 20px;
+    position:absolute;
+    left:0px;
+    top:0px;
+    right:200px; //Increase it if you want a little space between the 2 divs.
+    min-height:200px; // or bottom:0px; if you want a dynamic height
+}
+#right{
+    width:500px;
+    float:right;
+    min-height:200px;
+}
+
+.border{
+	background: gray;
+	border: 2px solid;
+	margin-bottom: 10px;
+	width: 500px;
+	float: right; 
+}
+
+.label-text{
+	width: 180px;
+	display: inline-block;
+	text-align: right;
+	vertical-align: top;
+}
+
+textarea{
+	width: 360px;
+	height: 50px;
+}
