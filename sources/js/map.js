@@ -12,7 +12,7 @@ $(document).ready(function(){
     });
 });
 
-Parse.initialization("R6bSzRV4B4p0PPOonPBfJMYOmVzc30ekeJhyQUEv", "amWdFqFhwmP7jLGPh0zCI2ozm5pjVdoqz9wiTGeL");
+Parse.initialize("R6bSzRV4B4p0PPOonPBfJMYOmVzc30ekeJhyQUEv", "amWdFqFhwmP7jLGPh0zCI2ozm5pjVdoqz9wiTGeL");
 
 var ParseObj = Parse.Object.extend('PersonPost');
 
