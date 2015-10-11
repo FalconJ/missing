@@ -48,7 +48,6 @@
         alert("Give permission to our app.");
       }
       else{
-        alert("Please login to Facebook.");
       }
     });
   };
