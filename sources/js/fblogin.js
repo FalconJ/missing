@@ -87,14 +87,17 @@
       console.log(response);
       console.log(fbinfo);
 
+      registerUser(fbinfo);
+
+      /* 
       if(logUser(fbinfo)){
         window.location.href = "bienvenido.html";
       }
       else{
-        registerUser(fbinfo);
+        
       }
 
-      /* 
+      
       getUser(response.email, function(user) {
 
           if(user.results[0] == null) {
