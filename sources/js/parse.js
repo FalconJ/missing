@@ -10,7 +10,7 @@ function registerUser(fbinfo){
 	user.set("sex", fbinfo[4]);
 	user.set("photo", fbinfo[5]);
 
-	user.SignUp(null, {
+	user.signUp(null, {
 		success: function(user){
 			console.log("Welcome buddy! :3");
 		},
