@@ -158,11 +158,9 @@ function initialize() {
 
   // This event listener calls addMarker() when the map is clicked.
     
-     var personaa = document.getElementById('personFirstName').value;
-    if (personaa.value !== "")
-    { 
-        google.maps.event.addListener(map, 'click', function(event)
-     {addMarker(event.latLng, map);  }) };
+    google.maps.event.addListener(map, 'click', function(event){
+    addMarker(event.latLng, map);
+    });
     
      
 
@@ -174,13 +172,13 @@ function initialize() {
 function addMarker(location, map) {
   // Add the marker at the clicked location, and add the next-available label
   // from the array of alphabetical characters.
-  
-  document.write(System.Gadget.Settings.read("personFirstName"));
+  if($("#personFirstName").val() != "" && "#personLastName").val() != "" && "#personAge").val() > 0 && "#personLastName").val() != "" && "#personLastSeen").val() != "" && "#personDescription").val() != "" && "#personIllness").val() != "")
+  {
   var marker = new google.maps.Marker({
     position: location,
     label: labels[labelIndex++ % labels.length],
     map: map
-  });
+  });}
 }
   
      
