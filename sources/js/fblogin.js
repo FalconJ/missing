@@ -84,20 +84,31 @@
 
       fbinfo.push('https://graph.facebook.com/' + response.id + '/picture?type=large');
       
-     /* var user = getUser(response.email, function(user) {
+      console.log(response);
+      console.log(fbinfo);
+
+      if(logUser(fbinfo)){
+        window.location.href = "bienvenido.html";
+      }
+      else{
+        registerUser(fbinfo);
+      }
+
+      /* 
+      getUser(response.email, function(user) {
 
           if(user.results[0] == null) {
 
-            saveUser(response, function() {
+            registerUser(response, function() {
               window.location.href = "profile.html?email="+response.email+"&picture="+fbinfo[fbinfo.length-1];
       });
  
       } else {
         window.location.href = "pantallabusqueda.html";
-      }
+      } */
 
-      }); */  
+      }); 
 
-      console.log(fbinfo);
+
     });
   }
