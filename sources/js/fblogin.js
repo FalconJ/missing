@@ -1,6 +1,7 @@
   function getUserData(){
       FB.api('/me', {fields: 'id,name,email,first_name,last_name,gender'}, function(response) {
 
+
       //Array that stores users info
       fbinfo = new Array();
 
