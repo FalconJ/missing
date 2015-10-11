@@ -87,7 +87,7 @@
       console.log(fbinfo);
 
       if(logIn(fbinfo)){
-        window.location.href = "bienvenido.html";
+        window.location.href = "app.html";
       } 
       else{
         registerUser(fbinfo);
