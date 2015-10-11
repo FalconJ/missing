@@ -47,7 +47,7 @@ function updateViewPerson(data) {
 	var table=$("#personas");
 	table.html('');
 	$.each(data.results, function (index, value) {
-		var trEl=$('<tr><td>'+value.Name+'</td><td>'+value.Age+'</td><td>'+value.LastSeen+'</td><td>'+value.Description+'</td><td>'+value.Illness+'</td><td>'+value.Sex	+'</td></tr>');	
+		var trEl=$('<tr><td>'+value.Name+'</td><td>'+value.Age+'</td><td>'+String(value.LastSeen)+'</td><td>'+value.Description+'</td><td>'+value.Illness+'</td><td>'+value.Sex	+'</td></tr>');	
 		table.append(trEl);		
 	});
 }
@@ -56,7 +56,7 @@ function updateViewPet(data) {
 	var table=$("#mascotas");
 	table.html('');
 	$.each(data.results, function (index, value) {
-		var trEl=$('<tr><td>'+value.Name+'</td><td>'+value.Animal+'</td><td>'+value.Age+'</td><td>'+value.LastSeen+'</td><td>'+value.Description+'</td><td>'+value.Illness+'</td><td>'+value.Sex+'</td><td>'+value.Reward+'</td></tr>');	
+		var trEl=$('<tr><td>'+value.Name+'</td><td>'+value.Animal+'</td><td>'+value.Age+'</td><td>'+String(value.LastSeen)+'</td><td>'+value.Description+'</td><td>'+value.Illness+'</td><td>'+value.Sex+'</td><td>'+value.Reward+'</td></tr>');	
 		table.append(trEl);		
 	});
 }
