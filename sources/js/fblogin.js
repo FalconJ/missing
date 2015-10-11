@@ -66,11 +66,13 @@
   }(document, 'script', 'facebook-jssdk'));
 
   //Log In Listener
-  document.getElementById('loginBtn').addEventListener('click', function(){
+$(document).ready(function(){
+    document.getElementById('loginBtn').addEventListener('click', function(){
     FB.login(function(response){
       if(response.authResponse){
         getUserData();
       }
     }, {scope: 'id,name,email,first_name,last_name,gender'}); 
   }, false);
+  });
  
