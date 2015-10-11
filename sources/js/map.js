@@ -57,7 +57,7 @@ function missDoge(){
         Description : $("#petDescription").val(),
         Illness     : $("#petIllness").val(),
         Sex         : $("#petSex").val(),
-        Reward      : $("#petReward").val(),
+        Reward      : Number($("#petReward").val()),
     };
 
     wow = new muchDoge();
