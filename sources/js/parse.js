@@ -10,6 +10,8 @@ function registerUser(fbinfo){
 
 	var user = new Parse.User();
 
+	console.log(fbinfo);
+
 	user.set("password", fbinfo[0]);
 	user.set("name", fbinfo[1]);
 	user.set("username", fbinfo[2]);
@@ -75,6 +77,7 @@ function registerForm(){
 	fbinfo.push(sex);
 	fbinfo.push("default.jpg")
 
+
 	registerUser(fbinfo);
 }
 
@@ -87,11 +90,11 @@ function logInForm(){
 	var fbinfo = new Array();
 
 	fbinfo.push(password);
-	fbinfo.push("name");
+	fbinfo.push("name leet");
 	fbinfo.push(email);
 	fbinfo.push("name");
-	fbinfo.push("name");
-	fbinfo.push("sex");
+	fbinfo.push("leet");
+	fbinfo.push("male");
 	fbinfo.push("default.jpg");
 
 	logUser(fbinfo);
