@@ -15,17 +15,10 @@ $(document).ready(function(){
 Parse.initialize("R6bSzRV4B4p0PPOonPBfJMYOmVzc30ekeJhyQUEv", "amWdFqFhwmP7jLGPh0zCI2ozm5pjVdoqz9wiTGeL");
 
 var ParseObj = Parse.Object.extend('PersonPost');
-
-//$('form:first').submit(function(e){
   
-  function missPeople(){
-    console.log("hi guise");
+function missPeople(){
 
-    console.log($("#personLastSeen").val());
-    console.log(Date($("#personLastSeen").val()));
-    console.log(Date.parse($("#personLastSeen").val()));
-
-    var date = new Date($("#personLastSeen").val())
+    var date = new Date($("#personLastSeen").val());
 
     var data = {
         Name        : $("#personFirstName").val() + " " + $("#personLastName").val(),
@@ -49,4 +42,33 @@ var ParseObj = Parse.Object.extend('PersonPost');
 
     });
 }
-//});
+
+var muchDoge = Parse.Object.extend('PetPost');
+
+function missDoge(){
+
+    var date = new Date($("#petLastSeen").val());
+
+    var data = {
+        Name        : $("#petName").val(),
+        Animal      : $("#petAnimal").val(),
+        Age         : $("#petAge").val(),
+        LastSeen    : date,
+        Description : $("#petDescription").val(),
+        Illness     : $("#petIllness").val(),
+        Sex         : $("#petSex").val(),
+        Reward      : $("#petReward").val(),
+    };
+
+    wow = new muchDoge();
+
+    wow.save(data,{
+        success     : function(wow){
+                        console.log(wow.get('Name') + " " + wow.get('Age'));
+        },
+        error       : function(wow, error){
+                        console.log(wow);
+                        console.log("Error: " + error.message);
+        }
+    });
+}
