@@ -79,8 +79,8 @@ function registerForm(){
 	user.set("sex", sex);
 	user.set("photo", 'default.jpg');
 
-	console.log(user[password]);
-	
+	console.log(typeof(name));
+
 	user.signUp(null, {
 
 		success: function(user){
