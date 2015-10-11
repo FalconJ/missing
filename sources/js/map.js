@@ -16,7 +16,9 @@ Parse.initialize("R6bSzRV4B4p0PPOonPBfJMYOmVzc30ekeJhyQUEv", "amWdFqFhwmP7jLGPh0
 
 var ParseObj = Parse.Object.extend('PersonPost');
 
-$('form:first').submit(function(e){
+//$('form:first').submit(function(e){
+  
+  function missPeople(){
     console.log("hi guise");
     e.preventDefault();
 
@@ -41,4 +43,5 @@ $('form:first').submit(function(e){
         }   
 
     });
-});
+}
+//});
