@@ -1,11 +1,11 @@
 $(document).ready(function(){
     
     $("#person").click(function(){
-        $("#formH").show();
-        $("#formP").hide();
+        $("#personForm").show();
+        $("#petForm").hide();
     });
     $("#pet").click(function(){
-        $("#formP").show();
-        $("#formH").hide();
+        $("#personForm").show();
+        $("#petForm").hide();
     });
 });

@@ -98,8 +98,12 @@
     <div id="map">
     </div>
 
+    <div id="tags">
+    <label id="person" class="text-red">Person Form</label>
+    <label id="pet" class="text-blue">Pet Form</label>
+    </div>
+
     <div id="right">
-            
         <form id="personForm">
              <fieldset class="border">
                  <legend>Person</legend>
@@ -150,9 +154,7 @@
                     <option value="female">female</option>
                 </select><br>
                 <label class="label-text" for="reward">Reward:</label> 
-                <label class="text-red label-text">None</label> 
-                    <input type="range" min="0" max="100" name="salary"> 
-                <label class="text-blue label-text">100</label> <br>
+                <input type="text" placeholder="Reward" required id="animalReward"> <br>
              </fieldset>
              <br>
              <input type="submit">

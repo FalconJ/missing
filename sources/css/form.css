@@ -3,12 +3,11 @@
 }
 
 #map{
-    width: 400px; 
-    height: 400px;
+    width: 600px; 
+    height: 356px;
     position:absolute;
-    left:600px;
     top:50px;
-    right:20px; 
+    right:30px; 
 }
 #right{
 	position: absolute;
