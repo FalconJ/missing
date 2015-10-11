@@ -1,5 +1,5 @@
   function getUserData(){
-      FB.api('/me', function(response) {
+      FB.api('/me', {fields: 'id,name,email,first_name,last_name,gender'}, function(response) {
 
       //Array that stores users info
       fbinfo = new Array();
@@ -72,7 +72,7 @@ $(document).ready(function(){
       if(response.authResponse){
         getUserData();
       }
-    }, {scope: 'id,name,email,first_name,last_name,gender'}); 
+    }, {scope: 'name,email,first_name,last_name,gender'}); 
   }, false);
   });
  
