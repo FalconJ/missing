@@ -5,7 +5,7 @@ $(document).ready(function(){
         $("#petForm").hide();
     });
     $("#pet").click(function(){
-        $("#personForm").show();
-        $("#petForm").hide();
+        $("#personForm").hide();
+        $("#petForm").show();
     });
 });
