@@ -21,10 +21,12 @@ var ParseObj = Parse.Object.extend('PersonPost');
   function missPeople(){
     console.log("hi guise");
 
+    console.log($("#personLastSeen").val());
+
     var data = {
         Name        : $("#personFirstName").val() + " " + $("#personLastName").val(),
         Age         : Number($("#personAge").val()),
-        LastSeen    : $("#personLastSeen").val(),
+        LastSeen    : Date($("#personLastSeen").val()),
         Description : $("#personDescription").val(),
         Illness     : $("#personIllness").val(),
         Sex         : $("#personSex").val(), 
