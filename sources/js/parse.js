@@ -30,6 +30,8 @@ function logUser(fbinfo){
 	user.set("password", fbinfo[0]);
 	user.set("email", "test@email.com");
 
+	console.log(user);
+
 	user.logIn(null, {
 		success: function(){
 			console.log("Welcome back bro");
@@ -38,5 +40,5 @@ function logUser(fbinfo){
 		error: function(user, error){
 			registerUser(user);
 		}
-	})
+	});
 }
