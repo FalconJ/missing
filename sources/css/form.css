@@ -1,10 +1,9 @@
 #parent{
     position:relative;
-    overflow:hidden;
 }
 
 #map{
-	margin: 20px;
+	margin: 20%;
     position:absolute;
     left:0px;
     top:0px;
@@ -12,16 +11,17 @@
     min-height:200px; // or bottom:0px; if you want a dynamic height
 }
 #right{
-    width:500px;
-    float:right;
-    min-height:200px;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	z-index: 99;
 }
 
 .border{
 	background: gray;
 	border: 2px solid;
 	margin-bottom: 10px;
-	width: 500px;
+	width: 700px;
 	float: right; 
 }
 
