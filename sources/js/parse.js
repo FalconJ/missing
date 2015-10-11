@@ -64,8 +64,6 @@ function registerForm(){
 	var password = document.getElementById('password').value;
 	var sex = document.getElementById('sex').value;
 
-	console.log(name + " " + email + " " + password + " " + sex);
-
 	var currentUser = Parse.User.current();
 
 	if (currentUser) {
@@ -81,6 +79,8 @@ function registerForm(){
 	user.set("sex", sex);
 	user.set("photo", 'default.jpg');
 
+	console.log(user[password]);
+	
 	user.signUp(null, {
 
 		success: function(user){
