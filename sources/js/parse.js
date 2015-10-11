@@ -49,3 +49,13 @@ function logUser(fbinfo){
 		}
 	});
 }
+
+function logOut(){
+   var currentUser = Parse.User.current();
+    
+    if (currentUser) {
+        Parse.User.logOut();
+    }
+
+    window.location = "index.html"
+}
