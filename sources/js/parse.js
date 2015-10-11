@@ -64,6 +64,7 @@ function registerForm(){
 	var password = document.getElementById('password').value;
 	var sex = document.getElementById('sex').value;
 
+	console.log(name + " " + email + " " + password + " " + sex);
 	if (currentUser) {
         Parse.User.logOut();
     } 
