@@ -8,7 +8,6 @@
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
-      console.log("llegue");
       testAPI();
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
@@ -52,9 +51,9 @@
   //
   // These three cases are handled in the callback function.
 
-  FB.getLoginStatus(function(response) {
+  /*FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
-  });
+  });*/
 
   };
 
