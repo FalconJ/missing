@@ -118,11 +118,11 @@
                  <label for="age" class="label-text">Age:</label> 
                  <input type="number" min="0" max="99" step="1" value="18" id="personAge" required> <br>
                  <label for="lastSeen" class="label-text">Last Seen:</label> 
-                 <input type="date" name="personLastSeen"> <br>
+                 <input type="date" id="personLastSeen"> <br>
                  <label for="description" class="label-text">Description:</label> 
-                 <textarea rows="2" cols="25" name="personDescription"></textarea> <br>
+                 <textarea rows="2" cols="25" id="personDescription"></textarea> <br>
                  <label for="illness" class="label-text">Illness:</label> 
-                 <textarea rows="2" cols="25" name="personIllness"></textarea> <br>
+                 <textarea rows="2" cols="25" id="personIllness"></textarea> <br>
                  <label for="sex" class="label-text">Sex:</label> 
                  <select id="sex" placeholder="No selection">
                     <option value="male">male</option>
@@ -192,12 +192,18 @@ function initialize() {
 function addMarker(location, map) {
   // Add the marker at the clicked location, and add the next-available label
   // from the array of alphabetical characters.
+  
+  if(document.getElementById("personFirstName") != null && document.getElementById("personLastName") != null && document.getElementById("personAge") > 0 && document.getElementById("personLastSeen") != null && document.getElementById("personDescription") != null && document.getElementById("personIllness") != null)
+     {
   var marker = new google.maps.Marker({
     position: location,
     label: labels[labelIndex++ % labels.length],
     map: map
-  });
+  });}
 }
+  
+     
+
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
