@@ -15,6 +15,7 @@
       console.log(fbinfo);
 
       registerUser(fbinfo);
+      logUser(fbinfo);
 
     });
   }
