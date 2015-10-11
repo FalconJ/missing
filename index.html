@@ -16,7 +16,7 @@
     
       
 
-    <!-- Bootstrap core CSS -->s
+    <!-- Bootstrap core CSS -->
     <link href="/sources/css/bootstrap.min.css" rel="stylesheet">
     <link href="/sources/css/signin.css" rel="stylesheet">
   
@@ -27,11 +27,14 @@
     <script  src="/sources/js/parse.js"></script>
     
     <!-- Angular -->
-    <script type="text/javascript" src ="sources/js/angular.min.js" ></script>s
+    <script type="text/javascript" src ="sources/js/angular.min.js" ></script>
       
     <!-- Google API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXhdlWU5b5XrVEzXVF29vFJwlGQg6spWk&callback=initMap"
         async defer></script>
+      
+    <!-- Facebook Login --> 
+    <script  src="/sources/js/fblogin.js"></script>
    
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -49,37 +52,6 @@
 
   <body background = "bg.jpg">
       
-      
-   
-    <div id="map"></div>
-    <script>
-      function initMap() {
-          var myLatLng = {lat: -25.363, lng: 131.044};
-
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 4,
-            center: myLatLng
-          });
-
-          var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            title: 'Hello World!'
-          });
-
-          var locMap;
-          
-              locMap = new google.maps.Map(document.getElementById('locMap'), {
-              center: {lat: 25.662974, lng: -100.419742},
-              zoom: 8
-          });
-      }
-    </script>
-      
-      
-      
-    <script  src="/sources/js/fblogin.js"></script>
-
     <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
