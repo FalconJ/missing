@@ -86,11 +86,8 @@
     </div>
  </nav>
 
-<<<<<<< HEAD
-     
-     
-      
-      
+         
+        
 <div id = "locMap"></div>
 <div class="container-fluid">
     <div class="row-fluid">
@@ -194,13 +191,22 @@ function initialize() {
         center: monterrey
   });
 
+  addMarker(monterrey, map);
+  monterrey = {lat: 25.661891, lng: -100.430642}; 
+  addMarker(monterrey, map); 
+  monterrey = {lat: 25.663891, lng: -100.413795};
+  addMarker(monterrey, map);
+  monterrey = {lat: 25.670525, lng: -100.413215};
+  addMarker(monterrey, map); 
+  monterrey = {lat: 25.673794, lng: -100.407293};
+  addMarker(monterrey, map);
   // This event listener calls addMarker() when the map is clicked.
   google.maps.event.addListener(map, 'click', function(event) {
-    addMarker(event.latLng, map);
+    //addMarker(event.latLng, map);
   });
 
   // Add a marker at the center of the map.
-  // addMarker(monterrey, map);
+  
 }
 
 // Adds a marker to the map.
