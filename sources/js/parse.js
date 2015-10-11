@@ -2,10 +2,6 @@ Parse.initialize("R6bSzRV4B4p0PPOonPBfJMYOmVzc30ekeJhyQUEv", "amWdFqFhwmP7jLGPh0
 
 function registerUser(user, fbinfo){
 
-	user.set("username", fbinfo[1]);
-	user.set("password", fbinfo[0]);
-	user.set("email", "test@email.com");
-
 	user.signUp(null, {
 		success: function(user){
 			console.log("Welcome buddy! :3");
@@ -32,13 +28,17 @@ function logUser(fbinfo){
 
 	user.set("username", fbinfo[1]);
 	user.set("password", fbinfo[0]);
+	user.set("username", fbinfo[1]);
+	user.set("password", fbinfo[0]);
+	user.set("email", "test@email.com");
 
 	user.logIn(null, {
 		success: function(){
-	      window.location = "login.html";
+			console.log("Welcome back bro");
+	    	window.location = "login.html";
 		},
 		error: function(user, error){
-			registerUser(user, fbinfo);
+			registerUser(user);
 		}
 	})
 }
