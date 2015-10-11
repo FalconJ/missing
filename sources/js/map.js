@@ -22,6 +22,8 @@ var ParseObj = Parse.Object.extend('PersonPost');
     console.log("hi guise");
 
     console.log($("#personLastSeen").val());
+    console.log(Date($("#personLastSeen").val()));
+    console.log(Date.parse($("#personLastSeen").val()));
 
     var data = {
         Name        : $("#personFirstName").val() + " " + $("#personLastName").val(),
