@@ -52,7 +52,7 @@ function missDoge(){
     var data = {
         Name        : $("#petName").val(),
         Animal      : $("#petAnimal").val(),
-        Age         : $("#petAge").val(),
+        Age         : Number($("#petAge").val()),
         LastSeen    : date,
         Description : $("#petDescription").val(),
         Illness     : $("#petIllness").val(),
