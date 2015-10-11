@@ -67,36 +67,15 @@ function registerForm(){
 
 	console.log(name + " " + email + " " + password + " " + sex);
 
+	fbinfo.push(password);
 	fbinfo.push(name);
 	fbinfo.push(email);
-	fbinfo.push(password);
+	fbinfo.push(name);
+	fbinfo.push(name);
 	fbinfo.push(sex);
 	fbinfo.push("default.jpg")
 
-	var currentUser = Parse.User.current();
-
-	if (currentUser) {
-        Parse.User.logOut();
-    } 
-
-	var user = new Parse.User();
-
-	user.set("password", fbinfo[2]);
-	user.set("name", fbinfo[0]);
-	user.set("username", fbinfo[1]);
-	user.set("email", fbinfo[1]);
-	user.set("sex", fbinfo[3]);
-	user.set("photo", fbinfo[4]);
-
-	user.signUp(null, {
-
-		success: function(user){
-			console.log("Welcome buddy! :3");
-			window.location = "home.html";
-		},
-		error: function(error){			
-		}
-	});
+	registerUser(fbinfo);
 }
 
 function logInForm(){
