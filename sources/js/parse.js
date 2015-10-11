@@ -30,9 +30,7 @@ function logUser(fbinfo){
 	user.set("password", fbinfo[0]);
 	user.set("email", "test@email.com");
 
-	console.log(user);
-
-	user.logIn(null, {
+	Parse.User.logIn(fbinfo[1], fbinfo[0], {
 		success: function(){
 			console.log("Welcome back bro");
 	    	window.location = "login.html";
