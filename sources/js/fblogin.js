@@ -75,7 +75,7 @@ $(document).ready(function(){
     },{
       scope:'id,name,email,first_name,last_name,gender',
       return_scopes: true
-    }; 
+    }); 
   }, false);
   });
  
