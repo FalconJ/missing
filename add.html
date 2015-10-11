@@ -84,83 +84,76 @@
     </div>
  </nav>
 
-     
-     
-      
-    
-      
-<div id="map">
+<div id="parent">
 
-    
-    
-</div>
+    <div id="map">
+    </div>
 
-<div>
+    <div id="right">
+            
+        <form id="personForm">
+             <fieldset class="border">
+                 <legend>Person</legend>
 
-    
-<form id="personForm">
-     <fieldset class="border">
-         <legend>Person</legend>
+                 <label for="firstName" class="label-text">First Name:</label>
+                 <input type="text" placeholder="First Name" required id="personFirstName"> <br>
+                 <label for="lastName" class="label-text">Last Name:</label>
+                 <input type="text" placeholder="Last Name" required id="personLastName"> <br>
+                 <label for="age" class="label-text">Age:</label> 
+                 <input type="number" min="0" max="99" step="1" value="18" id="age" required> <br>
+                 <label for="birthday" class="label-text">Last Seen:</label> 
+                 <input type="date" name="personLastSeen"> <br>
+                 <label for="description" class="label-text">Description:</label> 
+                 <textarea rows="2" cols="25" name="personDescription"></textarea> <br>
+                 <label for="illness" class="label-text">Illness:</label> 
+                 <textarea rows="2" cols="25" name="personIllness"></textarea> <br>
+                 <label for="sex" class="label-text">Sex:</label> 
+                 <select id="sex" placeholder="No selection">
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                </select><br>
+             </fieldset>
+             <br>
+             <input type="submit">
+         </form>
+              
+        <form class="formularyPet">
+             <tr>
+                 <h2>Pet</h2>
+             </tr>
+                 
+             <tr> 
+                 <p>Sex</p><td> <input type = "text">  </td>
+             </tr>
+             <br>
+              <tr> 
+                 <p>Animal</p><td> <input type = "text">  </td>
+             </tr>
+             <br>
+             <tr> 
+                 <p>Name</p><td> <input type = "text">  </td>
+             </tr>
+             <br>
+             <tr> 
+                 <p>Breed</p><td> <input type = "text">  </td>
+             </tr>
+             <br>
+             <tr> 
+                 <p>Last Seen</p><td> <input type = "date">  </td>
+             </tr>
+             <br>
+              <tr> 
+                 <p>Illnes</p><td> <textarea></textarea>  </td>
+             </tr>
+             <br>
+              <tr> 
+                 <p>Reward</p><td> <input type = "number">  </td>
+             </tr>
+             
+        </form>
+    </div>     
+</div>    
 
-         <label for="firstName" class="label-text">First Name:</label>
-         <input type="text" placeholder="First Name" required id="personFirstName"> <br>
-         <label for="lastName" class="label-text">Last Name:</label>
-         <input type="text" placeholder="Last Name" required id="personLastName"> <br>
-         <label for="age" class="label-text">Age:</label> 
-         <input type="number" min="0" max="99" step="1" value="18" id="age" required> <br>
-         <label for="birthday" class="label-text">Last Seen:</label> 
-         <input type="date" name="personLastSeen"> <br>
-         <label for="description" class="label-text">Description:</label> 
-         <textarea rows="2" cols="25" name="personDescription"></textarea> <br>
-         <label for="illness" class="label-text">Illness:</label> 
-         <textarea rows="2" cols="25" name="personIllness"></textarea> <br>
-         <label for="sex" class="label-text">Sex:</label> 
-         <select id="sex" placeholder="No selection">
-            <option value="male">male</option>
-            <option value="female">female</option>
-        </select><br>
-     </fieldset>
-     <br>
-     <input type="submit">
- </form>
-      
-<form class="formularyPet">
-     <tr>
-         <h2>Pet</h2>
-     </tr>
-         
-     <tr> 
-         <p>Sex</p><td> <input type = "text">  </td>
-     </tr>
-     <br>
-      <tr> 
-         <p>Animal</p><td> <input type = "text">  </td>
-     </tr>
-     <br>
-     <tr> 
-         <p>Name</p><td> <input type = "text">  </td>
-     </tr>
-     <br>
-     <tr> 
-         <p>Breed</p><td> <input type = "text">  </td>
-     </tr>
-     <br>
-     <tr> 
-         <p>Last Seen</p><td> <input type = "date">  </td>
-     </tr>
-     <br>
-      <tr> 
-         <p>Illnes</p><td> <textarea></textarea>  </td>
-     </tr>
-     <br>
-      <tr> 
-         <p>Reward</p><td> <input type = "number">  </td>
-     </tr>
-     
-     </form>
-
-</div>     
-    
 <script>
 // In the following example, markers appear when the user clicks on the map.
 // Each marker is labeled with a single alphabetical character.

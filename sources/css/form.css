@@ -1,8 +1,26 @@
+#parent{
+    position:relative;
+    overflow:hidden;
+}
+
+#map{
+    position:absolute;
+    left:0px;
+    top:0px;
+    right:200px; //Increase it if you want a little space between the 2 divs.
+    min-height:200px; // or bottom:0px; if you want a dynamic height
+}
+#right{
+    width:500px;
+    float:right;
+    min-height:200px;
+}
+
 .border{
 	background: gray;
 	border: 2px solid;
 	margin-bottom: 10px;
-	width: 360px;
+	width: 500px;
 	float: right; 
 }
 
