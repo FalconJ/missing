@@ -12,9 +12,9 @@ function registerUser(fbinfo){
 
 	user.set("username", fbinfo[1]);
 	user.set("password", fbinfo[0]);
-	user.set("username", fbinfo[1]);
-	user.set("password", fbinfo[0]);
-	user.set("email", "test@email.com");
+	user.set("email", fbinfo[2]);
+	user.set("sex", fbinfo[5]);
+	user.set("email", fbinfo[6]);
 
 	user.signUp(null, {
 
