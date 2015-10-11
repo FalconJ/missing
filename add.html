@@ -15,7 +15,8 @@
     <!-- jQuery -->
     <script src="sources/js/jquery.js"></script>
     
-      
+    <!-- form CSS -->
+    <link rel="stylesheet" type="text/css" href="sources/css/form.css">
 
     <!-- Bootstrap core CSS -->
     <link href="/sources/css/bootstrap.min.css" rel="stylesheet">
@@ -101,20 +102,26 @@
      <fieldset>
          <legend>Person</legend>
 
-         <label for="firstName">First Name:</label> <input type="text" placeholder="First Name" required id="personFirstName"> <br>
-         <label for="lastName">Last Name:</label> <input type="text" placeholder="Last Name" required id="personLastName"> <br>
-         <label for="age">Age:</label> <input type="number" min="0" max="99" step="1" value="18" id="age" required> <br>
-         <label for="birthday">Last Seen:</label> <input type="date" name="personLastSeen"> <br>
-         <label for="description">Description:</label> <textarea rows="2" cols="25" name="personDescription"></textarea> <br>
-         <label for="illness">Illness:</label> <textarea rows="2" cols="25" name="personIllness"></textarea> <br>
-         <label for="sex">Sex:</label> <select id="sex" placeholder="No selection">
-                                            <option value="male">male</option>
-                                            <option value="female">female</option>
-                                        </select><br>
+         <label for="firstName" class="label-text">First Name:</label>
+         <input type="text" placeholder="First Name" required id="personFirstName"> <br>
+         <label for="lastName" class="label-text">Last Name:</label>
+         <input type="text" placeholder="Last Name" required id="personLastName"> <br>
+         <label for="age" class="label-text">Age:</label> 
+         <input type="number" min="0" max="99" step="1" value="18" id="age" required> <br>
+         <label for="birthday" class="label-text">Last Seen:</label> 
+         <input type="date" name="personLastSeen"> <br>
+         <label for="description" class="label-text">Description:</label> 
+         <textarea rows="2" cols="25" name="personDescription"></textarea> <br>
+         <label for="illness" class="label-text">Illness:</label> 
+         <textarea rows="2" cols="25" name="personIllness"></textarea> <br>
+         <label for="sex" class="label-text">Sex:</label> 
+         <select id="sex" placeholder="No selection">
+            <option value="male">male</option>
+            <option value="female">female</option>
+        </select><br>
      </fieldset>
      <br>
      <input type="submit">
-     
  </form>
       
 <form class="formularyPet">
