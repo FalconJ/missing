@@ -86,24 +86,9 @@
       
       console.log(fbinfo);
 
-      logUser(fbinfo);
-
-
-      /*       
-      getUser(response.email, function(user) {
-
-          if(user.results[0] == null) {
-
-            registerUser(response, function() {
-              window.location.href = "profile.html?email="+response.email+"&picture="+fbinfo[fbinfo.length-1];
-      });
- 
-      } else {
-        window.location.href = "pantallabusqueda.html";
-      } 
-
-      }); */
-
+      if(!logUser(fbinfo)){
+        registerUser(fbinfo);
+      }
 
     });
   }
