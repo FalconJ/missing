@@ -23,8 +23,7 @@ function registerUser(fbinfo){
 			console.log("Welcome buddy! :3");
 			window.location = "login.html";
 		},
-		error: function(fbinfo, error){
-			logUser(fbinfo);			
+		error: function(error){			
 		}
 	});
 
@@ -44,7 +43,7 @@ function logUser(fbinfo){
 	    	window.location = "login.html";
 		},
 		error: function(user, error){
-			alert("Error: " + error.message);
+			//alert("Error: " + error.message);
 		}
 	});
 }
