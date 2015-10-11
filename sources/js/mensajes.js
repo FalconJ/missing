@@ -4,8 +4,8 @@ var parseKey = "tVBAmJERPajXL1k2vDwPNTXGlwlxRLomB6ccWJv5";
 $(document).ready(function(){
 	getMessages();
 	$("#send").click(function(){
-		var username = $("input[name=username]").attr('value');
-		var message = $("input[name=message]").attr('value');
+		var username = $("#username").val()
+		var message = $("#message").val()
 		console.log(username)
 		console.log("!")
 		$.ajax({
