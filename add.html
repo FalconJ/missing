@@ -89,7 +89,7 @@
                  <legend>Person</legend>
 
                  <label for="firstName" class="label-text">First Name:</label>
-                 <input type="text" placeholder="First Name" required id="personFirstName"> <br>
+                 <input type="text" placeholder="First Name" id="personFirstName" value=""> <br>
                  <label for="lastName" class="label-text">Last Name:</label>
                  <input type="text" placeholder="Last Name" required id="personLastName"> <br>
                  <label for="age" class="label-text">Age:</label> 
@@ -157,9 +157,14 @@ function initialize() {
   });
 
   // This event listener calls addMarker() when the map is clicked.
-  google.maps.event.addListener(map, 'click', function(event) {
-    addMarker(event.latLng, map);
-  });
+    
+     var personaa = document.getElementById('personFirstName').value;
+    if (personaa.value !== "")
+    { 
+        google.maps.event.addListener(map, 'click', function(event)
+     {addMarker(event.latLng, map);  }) };
+    
+     
 
   // Add a marker at the center of the map.
   // addMarker(monterrey, map);
@@ -170,13 +175,12 @@ function addMarker(location, map) {
   // Add the marker at the clicked location, and add the next-available label
   // from the array of alphabetical characters.
   
-  if(document.getElementById("personFirstName") != null && document.getElementById("personLastName") != null && document.getElementById("personAge") > 0 && document.getElementById("personLastSeen") != null && document.getElementById("personDescription") != null && document.getElementById("personIllness") != null)
-     {
+  document.write(System.Gadget.Settings.read("personFirstName"));
   var marker = new google.maps.Marker({
     position: location,
     label: labels[labelIndex++ % labels.length],
     map: map
-  });}
+  });
 }
   
      
@@ -185,6 +189,7 @@ function addMarker(location, map) {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 </script>
+      
 
   </body>
 </html>
