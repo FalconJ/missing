@@ -11,7 +11,7 @@ function registerUser(fbinfo){
 	var user = new Parse.User();
 
 	user.set("password", fbinfo[0]);
-	uset.set("name", fbinfo[1])
+	user.set("name", fbinfo[1])
 	user.set("username", fbinfo[2]);
 	user.set("email", fbinfo[2]);
 	user.set("sex", fbinfo[5]);
