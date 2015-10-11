@@ -82,20 +82,17 @@ function logInForm(){
 	var email = document.getElementById('iEmail').value;
 	var password = document.getElementById('iPassword').value;
 
-    var currentUser = Parse.User.current();
-    
-    if (currentUser) {
-        Parse.User.logOut();
-    } 
+	console.log(email + " " + password);
 
-	Parse.User.logIn(email, password, {
-		success: function(){
-			console.log("Welcome back bro");
-	    	window.location = "home.html";
-		},
-		error: function(user, error){
-			//alert("Error: " + error.message);
-		}
-	});
+	var fbinfo = new Array();
 
+	fbinfo.push(password);
+	fbinfo.push("name");
+	fbinfo.push(email);
+	fbinfo.push("name");
+	fbinfo.push("name");
+	fbinfo.push("sex");
+	fbinfo.push("default.jpg");
+
+	logUser(fbinfo);
 }
