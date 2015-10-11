@@ -100,19 +100,20 @@ a:hover {
 }
 
 .icon-bar {
-	background-color:#646566;
+	background-color:#fff;
 }
 
 .navbar-trans {
-	background-color:#2b2b2b;
+	background-color:#E6E6E6;
     color:#cdcdcd;
     border-width:0;
 }
 
 .navbar-trans .navbar-brand, .navbar-trans >.container-fluid .navbar-brand {
     padding: 14px;
+ margin-left: 90px;
+    margin-bottom: 6px;
     color:#f44d3c;
-    
 }
 
 .navbar-trans li>a:focus,.navbar-trans li.active {
@@ -127,7 +128,7 @@ a:hover {
 }
 
 .navbar-trans a{
-    color:#cdcdcd;
+    color:#000;
     letter-spacing:1px;
 }
 
