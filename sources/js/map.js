@@ -18,7 +18,7 @@ var ParseObj = Parse.Object.extend('PersonPost');
 
 //$('form:first').submit(function(e){
   
-  function missPeopl(e){
+  function missPeople(e){
     console.log("hi guise");
     e.preventDefault();
 
