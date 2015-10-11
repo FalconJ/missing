@@ -8,6 +8,10 @@ body{
   background-image: "img/bg.jpg";
 }
 
+#map {
+        height: 100%;
+      }
+    
 
 .title{
     align-content: center;
@@ -16,6 +20,8 @@ body{
     font-family:fantasy;
     font-size: 40px;
 }
+
+
 
 .loginFacebook{
     position: absolute;
