@@ -23,7 +23,7 @@ var ParseObj = Parse.Object.extend('PersonPost');
 
     var data = {
         Name        : $("#personFirstName").val() + " " + $("#personLastName").val(),
-        Age         : $("#personAge").val(),
+        Age         : Number($("#personAge").val()),
         LastSeen    : $("#personLastSeen").val(),
         Description : $("#personDescription").val(),
         Illness     : $("#personIllness").val(),
