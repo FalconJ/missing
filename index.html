@@ -86,14 +86,14 @@
     <h1 id = "login" class="title" align = "center">Find who you lost.</h1>
 
     <div class="container">
-      <form class="form-signin" method="post" action="home.html">
+      <form class="form-signin" method="" action="">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="iEmail" class="sr-only">Email address</label>
         <input type="email" id="iEmail" class="form-control" placeholder="Email address" required autofocus>
         <label for="iPassword" class="sr-only">Password</label>
         <input type="password" id="iPassword" class="form-control" placeholder="Password" required>
           
-        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="logInForm()">Sign in</button>   
+        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="logInForm(); return false;">Sign in</button>   
         <h3>Login with Facebook </h3> 
         <button id="loginBtn">Facebook Login</button>
         </form>
@@ -140,7 +140,7 @@
 <h2 class ="subtitulo">Register</h2>
       
 <div class="container">
-  <form class="form-signin" action="home.html" method="post">
+  <form class="form-signin" action="" method="">
     <h2 class="form-signin-heading">Register your account</h2>
 
      <label for="inputName" class="sr-only">Name</label>
@@ -161,7 +161,7 @@
       <option value="female">Female</option>
     </select>
              
-    <input class="button" type="submit" onclick="registerForm()" value="Register">  
+    <input class="button" type="submit" onclick="registerForm(); return false;" value="Register">  
     
     </form>
 </div>      
