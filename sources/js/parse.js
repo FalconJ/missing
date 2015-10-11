@@ -6,6 +6,18 @@ function registerUser(fbinfo){
 
 	user.set("username", fbinfo[1]);
 	user.set("password", fbinfo[0]);
+	user.set("email", "test@email.com");
+	user.set("sex", fbinfo[4]);
+	user.set("photo", fbinfo[5]);
+
+	user.SignUp(null, {
+		success: function(user){
+			console.log("Welcome buddy! :3");
+		},
+		error: function(user){
+			alert("Error: " + error.code + " " + error.message);
+		}
+	});
 
 }
 
