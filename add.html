@@ -33,6 +33,7 @@
     <!-- Google API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXhdlWU5b5XrVEzXVF29vFJwlGQg6spWk&callback=initMap"
         async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXhdlWU5b5XrVEzXVF29vFJwlGQg6spWk&signed_in=true"></script>
       
     <!-- Facebook Login --> 
     <script  src="/sources/js/fblogin.js"></script>
@@ -81,26 +82,126 @@
         </div>
     </div>
  </nav>
-         
-    <div id="map"></div>
+
+     
+     
+      
     
-    <script>
-      function initMap() {
-          var myLatLng = {lat: -25.363, lng: 131.044};
+      
+<div id="map">
 
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 4,
-            center: myLatLng
-          });
+    
+    
+</div>
 
-          var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            title: 'Hello World!'
-          });
+<div>
+           
+<form class="formularyHuman">
+     <tr>
+         <h2>Person</h2>            
+     </tr>
+         
+     <tr> 
+         <p>Name</p><td> <input type = "text">  </td>
+     </tr>
+     <br>
+      <tr> 
+         <p>Last Name</p><td> <input type = "text">  </td>
+     </tr>
+     <br>
+     <tr> 
+         <p>Age</p><td> <input type = "text">  </td>
+     </tr>
+     <br>
+     <tr> 
+         <p>Last Seen</p><td> <input type = "date">  </td>
+     </tr>
+     <br>
+      <tr> 
+         <p>Description</p><td> <textarea></textarea>  </td>
+     </tr>
+     <br>
+      <tr> 
+         <p>Illnes</p><td> <textarea></textarea>  </td>
+     </tr>
+     <br>
+     
+     </form>
+      
+<form class="formularyPet">
+     <tr>
+         <h2>Pet</h2>
+     </tr>
+         
+     <tr> 
+         <p>Sex</p><td> <input type = "text">  </td>
+     </tr>
+     <br>
+      <tr> 
+         <p>Animal</p><td> <input type = "text">  </td>
+     </tr>
+     <br>
+     <tr> 
+         <p>Name</p><td> <input type = "text">  </td>
+     </tr>
+     <br>
+     <tr> 
+         <p>Race</p><td> <input type = "text">  </td>
+     </tr>
+     <br>
+     <tr> 
+         <p>Last Seen</p><td> <input type = "date">  </td>
+     </tr>
+     <br>
+      <tr> 
+         <p>Illnes</p><td> <textarea></textarea>  </td>
+     </tr>
+     <br>
+      <tr> 
+         <p>Reward</p><td> <input type = "number">  </td>
+     </tr>
+     
+     </form>
 
-      }
-    </script>
+</div>     
+    
+<script>
+// In the following example, markers appear when the user clicks on the map.
+// Each marker is labeled with a single alphabetical character.
+var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var labelIndex = 0;
+
+function initialize() { 
+  var monterrey = {lat: 25.662936, lng: -100.419870};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: monterrey
+  });
+
+  // This event listener calls addMarker() when the map is clicked.
+  google.maps.event.addListener(map, 'click', function(event) {
+    addMarker(event.latLng, map);
+  });
+
+  // Add a marker at the center of the map.
+  // addMarker(monterrey, map);
+}
+
+// Adds a marker to the map.
+function addMarker(location, map) {
+  // Add the marker at the clicked location, and add the next-available label
+  // from the array of alphabetical characters.
+  var marker = new google.maps.Marker({
+    position: location,
+    label: labels[labelIndex++ % labels.length],
+    map: map
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
 
 	<h1> You've met with a terrible fate, haven't you? </h1>
 	<button onclick="logOut();">Log Out</button>
