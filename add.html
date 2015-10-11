@@ -105,7 +105,7 @@
                     <option value="male">male</option>
                     <option value="female">female</option>
                 </select><br>
-                <input type="submit" onclick="missPeople()">
+                <input type="submit" onclick="event.preventDefault(); missPeople()">
              </fieldset>
              <br>
          </form>
@@ -135,7 +135,7 @@
                 </select><br>
                 <label class="label-text" for="reward">Reward:</label> 
                 <input type="number" placeholder="Reward" required id="petReward"> <br>
-                <input type="submit" onclick="missDoge()">
+                <input type="submit" onclick="event.preventDefault(); missDoge()">
              </fieldset>
              <br>
          </form>
