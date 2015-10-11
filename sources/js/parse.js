@@ -27,7 +27,7 @@ function logUser(fbinfo){
 	user.set("username", fbinfo[1]);
 	user.set("password", fbinfo[0]);
 
-	user.signUp(null, {
+	user.logIn(null, {
 		success: function(){
 	      return true;
 		},
