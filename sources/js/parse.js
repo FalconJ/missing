@@ -14,7 +14,7 @@ function registerUser(fbinfo){
 		success: function(user){
 			console.log("Welcome buddy! :3");
 		},
-		error: function(user){
+		error: function(user, error){
 			alert("Error: " + error.code + " " + error.message);
 		}
 	});
