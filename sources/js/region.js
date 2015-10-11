@@ -44,7 +44,7 @@ $(document).ready(function () {
 });
 
 function updateViewPerson(data) {	
-	var table=$(".table tbody")[0];
+	var table=$("#personas");
 	table.html('');
 	$.each(messages.results, function (index, value) {
 		var trEl=$('<tr><td>'+value.Name+'</td><td>'+value.Age+'</td><td>'+value.LastSeen+'</td><td>'+value.Description+'</td><td>'+value.Illness+'</td><td>'+value.Sex	+'</td></tr>');	
@@ -52,8 +52,8 @@ function updateViewPerson(data) {
 	});
 }
 
-function updateViewPersona(data) {	
-	var table=$(".table tbody")[1];
+function updateViewPet(data) {	
+	var table=$(".#mascotas");
 	table.html('');
 	$.each(messages.results, function (index, value) {
 		var trEl=$('<tr><td>'+value.Name+'</td><td>'+value.Animal+'</td><td>'+value.Age+'</td><td>'+value.LastSeen+'</td><td>'+value.Description+'</td><td>'+value.Illness+'</td><td>'+value.Sex+'</td><td>'+value.Reward+'</td></tr>');	
