@@ -97,37 +97,25 @@
 <div>
 
     
-<form class="formularyHuman">
-     <tr>
-         <h2>Person</h2>            
-     </tr>
-         
-     <tr> 
-         <p>Name</p><td> <input id = "humanName" type = "text">  </td>
-     </tr>
+<form id="personForm">
+     <fieldset>
+         <legend>Person</legend>
+
+         <label for="firstName">First Name:</label> <input type="text" placeholder="First Name" required id="personFirstName"> <br>
+         <label for="lastName">Last Name:</label> <input type="text" placeholder="Last Name" required id="personLastName"> <br>
+         <label for="age">Age:</label> <input type="number" min="0" max="99" step="1" value="18" id="age" required> <br>
+         <label for="birthday">Last Seen:</label> <input type="date" name="personLastSeen"> <br>
+         <label for="description">Description:</label> <textarea rows="2" cols="25" name="personDescription"></textarea> <br>
+         <label for="illness">Illness:</label> <textarea rows="2" cols="25" name="personIllness"></textarea> <br>
+         <label for="sex">Sex:</label> <select id="sex" placeholder="No selection">
+                                            <option value="male">male</option>
+                                            <option value="female">female</option>
+                                        </select><br>
+     </fieldset>
      <br>
-      <tr> 
-         <p>Last Name</p><td> <input id = "humanLastName" type = "text">  </td>
-     </tr>
-     <br>
-     <tr> 
-         <p>Age</p><td> <input id = "humanAge" type = "text">  </td>
-     </tr>
-     <br>
-     <tr> 
-         <p>Last Seen</p><td> <input id = "humanLastSeen" type = "date">  </td>
-     </tr>
-     <br>
-      <tr> 
-         <p>Description</p><td> <textarea id = "humanDescription"></textarea>  </td>
-     </tr>
-     <br>
-      <tr> 
-         <p>Illnes</p><td> <textarea id = "humanIllnes"></textarea>  </td>
-     </tr>
-     <br>
+     <input type="submit">
      
-     </form>
+ </form>
       
 <form class="formularyPet">
      <tr>
