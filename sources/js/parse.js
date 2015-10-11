@@ -21,7 +21,7 @@ function registerUser(fbinfo){
 
 		success: function(user){
 			console.log("Welcome buddy! :3");
-			window.location = "login.html";
+			window.location = "home.html";
 		},
 		error: function(error){			
 		}
@@ -40,7 +40,7 @@ function logUser(fbinfo){
 	Parse.User.logIn(fbinfo[2], fbinfo[0], {
 		success: function(){
 			console.log("Welcome back bro");
-	    	window.location = "login.html";
+	    	window.location = "home.html";
 		},
 		error: function(user, error){
 			//alert("Error: " + error.message);
@@ -85,7 +85,7 @@ function registerForm(){
 
 		success: function(user){
 			console.log("Welcome buddy! :3");
-			window.location = "login.html";
+			window.location = "home.html";
 		},
 		error: function(error){			
 		}
@@ -105,7 +105,7 @@ function logInForm(){
 	Parse.User.logIn(email, password, {
 		success: function(){
 			console.log("Welcome back bro");
-	    	window.location = "login.html";
+	    	window.location = "home.html";
 		},
 		error: function(user, error){
 			//alert("Error: " + error.message);
