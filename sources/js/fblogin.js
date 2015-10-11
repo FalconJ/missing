@@ -72,7 +72,7 @@ $(document).ready(function(){
       if(response.authResponse){
         getUserData();
       }
-    }, {scope: 'name,email,first_name,last_name,gender'}); 
+    }; 
   }, false);
   });
  
