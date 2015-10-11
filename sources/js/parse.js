@@ -59,12 +59,19 @@ function logOut(){
 }
 
 function registerForm(){
+	var fbinfo = new Array();
 	var name = document.getElementById('name').value + " " + document.getElementById('lastName').value;
 	var email = document.getElementById('email').value;
 	var password = document.getElementById('password').value;
 	var sex = document.getElementById('sex').value;
 
 	console.log(name + " " + email + " " + password + " " + sex);
+
+	fbinfo.push(name);
+	fbinfo.push(email);
+	fbinfo.push(password);
+	fbinfo.push(sex);
+	fbinfo.push("default.jpg")
 
 	var currentUser = Parse.User.current();
 
@@ -74,12 +81,12 @@ function registerForm(){
 
 	var user = new Parse.User();
 
-	user.set("password", password);
-	user.set("name", name);
-	user.set("username", email);
-	user.set("email", email);
-	user.set("sex", sex);
-	user.set("photo", "default.jpg");
+	user.set("password", fbinfo[2]);
+	user.set("name", fbinfo[0]);
+	user.set("username", fbinfo[1]);
+	user.set("email", fbinfo[1]);
+	user.set("sex", fbinfo[3]);
+	user.set("photo", fbinfo[4]);
 
 	user.signUp(null, {
 
