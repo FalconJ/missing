@@ -29,6 +29,8 @@ function missPeople(){
         Sex         : $("#personSex").val(), 
     };
 
+    $("#personForm")[0].reset();
+
     parseObj = new ParseObj();
 
     parseObj.save(data, {
@@ -61,6 +63,8 @@ function missDoge(){
     };
 
     wow = new muchDoge();
+
+    $("#petForm")[0].reset();
 
     wow.save(data,{
         success     : function(wow){
