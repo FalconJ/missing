@@ -1,10 +1,8 @@
 Parse.initialize("R6bSzRV4B4p0PPOonPBfJMYOmVzc30ekeJhyQUEv", "amWdFqFhwmP7jLGPh0zCI2ozm5pjVdoqz9wiTGeL");
 
-function registerUser(user, fbinfo){
+function registerUser(fbinfo){
 
-	user.signUp(null, {
-
-   var currentUser = Parse.User.current();
+    var currentUser = Parse.User.current();
     
     if (currentUser) {
         Parse.User.logOut();
@@ -17,6 +15,8 @@ function registerUser(user, fbinfo){
 	user.set("username", fbinfo[1]);
 	user.set("password", fbinfo[0]);
 	user.set("email", "test@email.com");
+
+	user.signUp(null, {
 
 		success: function(user){
 			console.log("Welcome buddy! :3");
