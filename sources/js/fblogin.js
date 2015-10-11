@@ -73,7 +73,7 @@ $(document).ready(function(){
         getUserData();
       }
     },{
-      scope:'email',
+      scope:'public_profil,email',
       return_scopes: true
     }); 
   }, false);
