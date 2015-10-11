@@ -1,11 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400);
 @import url(http://fonts.googleapis.com/css?family=Bitter:400);
 
-body{
+html,body{
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #eee;
-  background-image: "img/bg.jpg";
+  height: 100%;
+  margin: 50;
+  padding: 50;
 }
 
 #map {
