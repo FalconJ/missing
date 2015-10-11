@@ -86,7 +86,7 @@
       
       console.log(fbinfo);
 
-      if(logIn(fbinfo)){
+      if(logUser(fbinfo)){
         window.location.href = "app.html";
       } 
       else{
