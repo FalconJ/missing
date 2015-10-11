@@ -18,10 +18,9 @@
 
 .border{
 	background: gray;
-	border: 2px solid;
+	border: 10px solid;
 	margin-bottom: 10px;
 	width: 700px;
-	float: right; 
 }
 
 .label-text{
