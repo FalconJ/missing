@@ -20,3 +20,19 @@ function registerUser(fbinfo){
 	});
 
 }
+
+function logUser(fbinfo){
+	var user = new Parse.User();
+
+	user.set("username", fbinfo[1]);
+	user.set("password", fbinfo[0]);
+
+	user.signUp(null, {
+		success: function(){
+	      return true;
+		},
+		error: function(user, error){
+			return false;
+		}
+	})
+}
