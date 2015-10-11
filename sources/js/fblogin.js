@@ -70,7 +70,6 @@
   document.getElementById('loginBtn').addEventListener('click', function(){
     FB.login(function(response){
       if(response.authResponse){
-        document.getElementById('loginBtn').style.display = 'none';
         getUserData();
       }
     }, {scope: 'id,name,email,first_name,last_name,gender', return_scopes: true}); 
